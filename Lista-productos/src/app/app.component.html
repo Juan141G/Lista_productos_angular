@@ -1,0 +1,28 @@
+
+
+<div class="container">
+  <!-- 1. Título y fecha con pipes -->
+  <h1>{{ title | uppercase }}</h1>
+  <p> {{ fechaActual | date :'fullDate' | titlecase }}</p>
+
+
+
+  <!-- 4. Input + botón para agregar producto -->
+  <div class="input-group">
+    <input type="text" [(ngModel)]="nuevoProducto" placeholder="Nuevo producto">
+    <button (click)="agregarProducto()">Agregar</button>
+  </div>
+
+    <!-- 3. Botón para mostrar/ocultar -->
+  <button (click)="toggleLista()">
+    {{ mostrarLista ? 'Ocultar Lista' : 'Mostrar Lista' }}
+  </button>
+  
+  <!-- 2 y 5. Lista de productos con *ngFor y componente hijo -->
+  <ul *ngIf="mostrarLista">
+    <li *ngFor="let producto of productos">
+      <app-producto-card [nombre]="producto"></app-producto-card>
+    </li>
+  </ul>
+</div>
+

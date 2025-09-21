@@ -1,0 +1,10 @@
+.card {
+  background-color: #7e3ef5;
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 6px;
+  text-align: left;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(243, 240, 240, 0.1);
+  color: #fff; /* Color de texto blanco */
+}
